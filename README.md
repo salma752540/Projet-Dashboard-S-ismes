@@ -1,4 +1,5 @@
-# Projet-Data-VIS
+#  Dashboard Séismes
+
 ## Description
 Ce projet est un dashboard interactif pour visualiser des données sur les tremblements de terre de 1965 à 2016. Il permet de suivre l'évolution des séismes en fonction de divers paramètres tels que la profondeur, la magnitude et la localisation géographique.
 ## Fonctionnalités
