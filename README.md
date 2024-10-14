@@ -23,4 +23,4 @@ python app.py
 ````
 ## Exemples d'utilisation
 Voici un exemple de la visualisation des tremblements de terre par région :
-![Exemple de visualisation](images/dash1.png)
+![Exemple de visualisation](images/dash1.PNG)
