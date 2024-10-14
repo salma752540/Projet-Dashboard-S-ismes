@@ -27,6 +27,6 @@ Voici un exemple de la visualisation des tremblements de terre par région :
 ## License
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](License) pour plus de détails.
 ## Contact
-Si vous avez des questions, contactez-moi à (souissi.salma122000@gmail).com 
+Si vous avez des questions, contactez-moi à [souissi.salma122000@gmail.com](souissi.salma122000@gmail.com) 
 
 
