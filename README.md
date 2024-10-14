@@ -9,7 +9,7 @@ Ce projet est un dashboard interactif pour visualiser des données sur les tremb
 ## Prérequis
 Avant d'exécuter ce projet, assurez-vous d'avoir installé les éléments suivants :
 - Python 3.x
-- Bibliothèques : `pandas`, `matplotlib`, `seaborn`, `plotly`
+- Bibliothèques : `pandas`, `matplotlib`, `seaborn`, `plotly` , `dash` 
 ## Installation et CONFIGURATION du projet 
 Clonez le dépôt et installez les dépendances :
 ```bash
