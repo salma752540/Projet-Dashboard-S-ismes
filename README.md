@@ -24,3 +24,9 @@ python app.py
 ## Exemples d'utilisation
 Voici un exemple de la visualisation des tremblements de terre par région :
 ![Exemple de visualisation](dash2.PNG)
+## License
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](License) pour plus de détails.
+## Contact
+Si vous avez des questions, contactez-moi à [email@example.com](souissi.salma122000@gmail.com).
+
+
