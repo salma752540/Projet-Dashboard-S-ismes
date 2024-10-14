@@ -15,7 +15,12 @@ Clonez le dépôt et installez les dépendances :
 git clone https://github.com/salma752540/Projet-Data-VIS
 cd Projet-Data-VIS
 pip install -r requirements.txt
+````
 ## Utilisation
 Après avoir installé les dépendances, exécutez le projet avec la commande suivante :
 ```bash
 python app.py
+````
+## Exemples d'utilisation
+Voici un exemple de la visualisation des tremblements de terre par région :
+![Exemple de visualisation](images/dash1.png)
