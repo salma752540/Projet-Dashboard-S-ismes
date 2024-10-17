@@ -35,3 +35,21 @@ v1= px.scatter(groupement, x='groupe_longitude', y='groupe_latitude',
                  labels={'groupe_longitude':'Longitude', 'groupe_latitude':'Latitude'},
                  title="Variation de Nombre des Tremblements de Terre En Fonction des  Regions ")
 v1.show()
+#distribution des Tremblements de terre par rapport à l'équateur & méridien Greenwich:
+#déterminer les regions:
+nord_est= data[(data['Latitude'] > 0) & (data['Longitude'] > 0)]
+nord_oest = data[(data['Latitude'] > 0) & (data['Longitude'] <0)]
+sud_est = data[(data['Latitude'] < 0) & (data['Longitude'] > 0)]
+sud_oest = data[(data['Latitude'] < 0) & (data['Longitude'] < 0)]
+#calculer le nombre de tremblement par région (n_T *100)/N_totale_T:
+x=(len(nord_est)*100)/len(data)
+y=(len(nord_oest)*100)/len(data)
+z=(len(sud_est)*100)/len(data)
+t=(len(sud_oest)*100)/len(data)
+#visualisation :
+v2 = px.pie(values=[x, y, z, t],
+            names=['Nord-Est', 'Nord-Ouest', 'Sud-Est', 'Sud-Ouest'],
+            title="Distribution des Tremblements de Terre En <br>Fonction de l'Équateur et du Méridien de Greenwich ",
+
+            color_discrete_sequence=['pink', 'yellow', 'lime', 'orange'])
+v2.show()
