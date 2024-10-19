@@ -53,3 +53,47 @@ v2 = px.pie(values=[x, y, z, t],
 
             color_discrete_sequence=['pink', 'yellow', 'lime', 'orange'])
 v2.show()
+
+# Assurer que la colonne 'Date' est en format datetime
+data['Date'] = pd.to_datetime(data['Date'], errors='coerce')
+
+# Extraire l'année à partir de la colonne 'Date'
+data['Year'] = data['Date'].dt.year
+
+# Distribution des tremblements de terre par année
+earthquakes_per_year = data.groupby('Year').size().reset_index(name='n_Troublements')
+
+# Visualisation: Line Plot de tremblements de terre par année
+v3 = px.line(earthquakes_per_year, x='Year', y='n_Troublements',
+             labels={'Year': 'Année', 'n_Troublements': 'Nombre de Tremblements de Terre'},
+             title="Distribution des Tremblements de Terre par Année")
+
+# Ajouter des marqueurs pour chaque point sur la ligne
+v3.update_traces(mode='lines+markers')
+
+v3.show()
+
+
+# Extraire le mois à partir de la colonne 'Date'
+data['Month'] = data['Date'].dt.month
+
+# Distribution des tremblements de terre par mois
+earthquakes_per_month = data.groupby('Month').size().reset_index(name='n_Troublements')
+
+# Identifier le mois avec le plus grand nombre de tremblements de terre
+max_month = earthquakes_per_month.loc[earthquakes_per_month['n_Troublements'].idxmax()]
+
+print(f"Le mois avec le plus grand nombre de tremblements de terre est : Mois {int(max_month['Month'])} avec {int(max_month['n_Troublements'])} tremblements.")
+
+# Visualisation: Histogramme de tremblements de terre par mois
+v4 = px.bar(earthquakes_per_month, x='Month', y='n_Troublements',
+            labels={'Month': 'Mois', 'n_Troublements': 'Nombre de Tremblements de Terre'},
+            title="Distribution des Tremblements de Terre par Mois")
+
+# Ajouter une annotation pour mettre en évidence le mois le plus actif
+v4.add_annotation(x=max_month['Month'], y=max_month['n_Troublements'],
+                  text=f"Le mois le plus actif ({int(max_month['n_Troublements'])} tremblements)",
+                  showarrow=True, arrowhead=2)
+
+v4.show()
+
